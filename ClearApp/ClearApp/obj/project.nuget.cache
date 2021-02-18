@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "CCjQS1mF6TTBaWuaMmHAuSlcOPbl02wA78FFT/t8ufHGUPlBbbZwuU8QQvkgyRm7cIk+gHKZW7j61KGW8+vsnw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\musae\\source\\repos\\ClearApp\\ClearApp\\ClearApp\\ClearApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\musae\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\musae\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\musae\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\musae\\.nuget\\packages\\xam.plugin.simpleaudioplayer\\1.4.0\\xam.plugin.simpleaudioplayer.1.4.0.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512"
+  ],
+  "logs": []
+}

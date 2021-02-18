@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClearApp.Views.Buttons">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label x:Name ="Head" Text="Ленивые и Охуевшие?" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+
+                 <!--Пример добавление конпки: каждые две строчки это одна кнопка и один лейбл под ней-->
+
+                 <!--Text: Текст на кнопке-->
+                 <!--xName: Имя перменной в коде для обращение к объекту контента-->
+                 <!--Сlicked: Имя функции для обработки нажатия данной кнопки-->
+                 <!--Label делает отступ-->
+
+            <Button  Text="Староста" x:Name="Starosta" Clicked="Button_Clicked"></Button>
+            <Label x:Name="lblStarosta" FontSize="Large"></Label>
+ 
+            <Button  Text="Босс Этой Качалки" x:Name="Boss" Clicked="Button_Clicked2"></Button>
+            <Label x:Name="lblBoss" FontSize="Large"></Label>
+
+            <Button  Text="Тёмный" x:Name="Tema" Clicked="Button_Clicked3"></Button>
+            <Label x:Name="lblTema" FontSize="Large"></Label>
+
+            <Button  Text="Фиш" x:Name="Fish" Clicked="Button_Clicked4"></Button>
+            <Label x:Name="lblFish" FontSize="Large"></Label>
+
+            <Button  Text="Ягерь" x:Name="Egor" Clicked="Button_Clicked5"></Button>
+            <Label x:Name="lblEgor" FontSize="Large"></Label>
+
+            <Button  Text="НЕ кит" x:Name="Nikita" Clicked="Button_Clicked6"></Button>
+            <Label x:Name="lblNikita" FontSize="Large"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
