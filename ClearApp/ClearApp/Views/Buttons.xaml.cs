@@ -1,5 +1,6 @@
 ﻿using System;
 using Plugin.SimpleAudioPlayer;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,12 +11,31 @@ using Xamarin.Forms.Xaml;
 namespace ClearApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+    [assembly: UsesPermission(Android.Manifest.Permission.Vibrate)]
     public partial class Buttons : ContentPage
     {
         
         public Buttons()
         {
             InitializeComponent();
+        }
+
+        // Вибрирование на самых охуенных челов из группы
+        private void Vibrate() 
+        {
+            try
+            {
+                var duration = TimeSpan.FromSeconds(0.3);
+                Vibration.Vibrate(duration);
+            }
+            catch (FeatureNotSupportedException ex)
+            {
+                // Feature not supported on device
+            }
+            catch (Exception ex)
+            {
+                // Other error has occurred.
+            }
         }
 
         // Создание объекта для работы с аудиофайлами типа мп3
@@ -30,6 +50,7 @@ namespace ClearApp.Views
             // Загрузки и проигрывание мп3
             player.Load("Starosta.mp3");
             player.Play();
+            Vibrate();
         }
 
         private void Button_Clicked2(object sender, EventArgs e)
@@ -38,6 +59,7 @@ namespace ClearApp.Views
 
             player.Load("TempMaksim.mp3");
             player.Play();
+            Vibrate();
         }
 
         private void Button_Clicked3(object sender, EventArgs e)
