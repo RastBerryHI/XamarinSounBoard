@@ -15,23 +15,23 @@
                 <!--xName: Имя перменной в коде для обращение к объекту контента-->
                 <!--Сlicked: Имя функции для обработки нажатия данной кнопки-->
                 <!--Label делает отступ-->
-
-                <Button  Text="Староста" x:Name="Starosta" Clicked="Button_Clicked"></Button>
+                
+                <Button  Text="Староста" ClassId="Starosta" Clicked="Button_Clicked"></Button>
                 <Label x:Name="lblStarosta" FontSize="Large"></Label>
 
-                <Button  Text="Босс Этой Качалки" x:Name="Boss" Clicked="Button_Clicked2"></Button>
+                <Button  Text="Босс Этой Качалки" ClassId="Boss" Clicked="Button_Clicked"></Button>
                 <Label x:Name="lblBoss" FontSize="Large"></Label>
 
-                <Button  Text="Тёмный" x:Name="Tema" Clicked="Button_Clicked3"></Button>
+                <Button  Text="Тёмный" ClassId="Tema" Clicked="Button_Clicked"></Button>
                 <Label x:Name="lblTema" FontSize="Large"></Label>
 
-                <Button  Text="Фиш" x:Name="Fish" Clicked="Button_Clicked4"></Button>
+                <Button  Text="Фиш" ClassId="Fish" Clicked="Button_Clicked"></Button>
                 <Label x:Name="lblFish" FontSize="Large"></Label>
 
-                <Button  Text="Ягерь" x:Name="Egor" Clicked="Button_Clicked5"></Button>
+                <Button  Text="Ягерь" ClassId="Egor" Clicked="Button_Clicked"></Button>
                 <Label x:Name="lblEgor" FontSize="Large"></Label>
 
-                <Button  Text="НЕ кит" x:Name="Nikita" Clicked="Button_Clicked6"></Button>
+                <Button  Text="НЕ кит" ClassId="Nikita" Clicked="Button_Clicked"></Button>
                 <Label x:Name="lblNikita" FontSize="Large"></Label>
             </StackLayout>
         </ScrollView>

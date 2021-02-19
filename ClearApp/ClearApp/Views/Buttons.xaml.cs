@@ -1,8 +1,10 @@
 ﻿using System;
 using Plugin.SimpleAudioPlayer;
+using System.Collections.Generic;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+
 
 // Класс в котором реализуются функции для кнопок
 
@@ -13,7 +15,6 @@ namespace ClearApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Buttons : ContentPage
     {
-        
         public Buttons()
         {
             InitializeComponent();
@@ -29,12 +30,25 @@ namespace ClearApp.Views
             }
             catch (FeatureNotSupportedException ex)
             {
-                // Feature not supported on device
+                // Вывод в синий лейбл сообщения
+                Head.Text = "У вас не поддерживается вибрация";
             }
             catch (Exception ex)
             {
-                // Other error has occurred.
+                Head.Text = "Возникла ошибка";
             }
+        }
+
+        // Инкапсулированная логика реакции на нажатие
+        private void DoResponse(string HeadText, string fileName) 
+        {
+            
+            Head.Text = HeadText;
+
+            // Загрузки и проигрывание мп3
+            player.Load(fileName);
+            player.Play();
+            Vibrate();
         }
 
         // Создание объекта для работы с аудиофайлами типа мп3
@@ -43,55 +57,32 @@ namespace ClearApp.Views
         // Название функции-события задаётся в атрибуте Clicked в Button
         private void Button_Clicked(object sender, EventArgs e) 
         {
-            // Поле текста label (Голубое поле сверху кнопок)
-            Head.Text = "Нихуя ты придумал";
-
-            // Загрузки и проигрывание мп3
-            player.Load("Starosta.mp3");
-            player.Play();
-            Vibrate();
+            // Объект для обращения к атрибутам в тэгге <Button></Button>
+            Button button = (Button)sender;
+            switch (button.ClassId) 
+            {
+                case "Starosta":
+                    DoResponse(HeadText: "Я потерял журнал", fileName: "Starosta.mp3");
+                    Vibrate();
+                    break;
+                case "Boss":
+                    DoResponse(HeadText: "Любое слово + Жопа", fileName: "TempMaksim.mp3");
+                    Vibrate();
+                    break;
+                case "Tema":
+                    DoResponse(HeadText: "Обогреватель в общаге 24/7", fileName: "Artem.mp3");
+                    break;
+                case "Fish":
+                    DoResponse(HeadText: "Хакер трубы чистил и так стал чёрным", fileName: "Fish.mp3");
+                    break;
+                case "Egor":
+                    DoResponse(HeadText: "Мелочь тоже деньги", fileName: "Egor.mp3");
+                    Vibrate();
+                    break;
+                case "Nikita":
+                    DoResponse(HeadText: "Та я просто дungeon master", fileName: "Nikita.mp3");
+                    break;
+            }
         }
-
-        private void Button_Clicked2(object sender, EventArgs e)
-        {
-            Head.Text = "Король Белого Трона";
-
-            player.Load("TempMaksim.mp3");
-            player.Play();
-            Vibrate();
-        }
-
-        private void Button_Clicked3(object sender, EventArgs e)
-        {
-            Head.Text = "Лупа и Пупа = Минус компутер";
-
-            player.Load("Artem.mp3");
-            player.Play();
-        }
-
-        private void Button_Clicked4(object sender, EventArgs e)
-        {
-            Head.Text = "Хакер в одни ворота";
-
-            player.Load("Fish.mp3");
-            player.Play();
-        }
-
-        private void Button_Clicked5(object sender, EventArgs e)
-        {
-            Head.Text = "Мелочь тоже деньги";
-
-            player.Load("Egor.mp3");
-            player.Play();
-        }
-
-        private void Button_Clicked6(object sender, EventArgs e)
-        {
-            Head.Text = "Кто нахуй? Ты нахуй? Я нахуй!?";
-
-            player.Load("Nikita.mp3");
-            player.Play();
-        }
-
     }
 }
