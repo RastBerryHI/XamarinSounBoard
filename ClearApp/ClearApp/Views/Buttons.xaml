@@ -8,31 +8,39 @@
                 <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
                     <Label x:Name ="Head" Text="Ленивые и Охуевшие?" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
                 </Frame>
+                    <!--Добавил таблицу с контентом-->
+                <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <!--Пример добавление конпки: каждые две строчки это одна кнопка и один лейбл под ней-->
 
-                <!--Пример добавление конпки: каждые две строчки это одна кнопка и один лейбл под ней-->
+                    <!--Text: Текст на кнопке-->
+                    <!--xName: Имя перменной в коде для обращение к объекту контента-->
+                    <!--Сlicked: Имя функции для обработки нажатия данной кнопки-->
+                    <!--Label делает отступ-->
+                    <!-- Row: строка Column: столбец. Нумерация с 0-->
 
-                <!--Text: Текст на кнопке-->
-                <!--xName: Имя перменной в коде для обращение к объекту контента-->
-                <!--Сlicked: Имя функции для обработки нажатия данной кнопки-->
-                <!--Label делает отступ-->
+                    <Button  Text="Староста" ClassId="Starosta" Clicked="Button_Clicked" Grid.Row="0" Grid.Column="0" BackgroundColor="#C3661C"  HeightRequest="100" WidthRequest="100"></Button>
+                    <Button  Text="Босс Этой Качалки" ClassId="Boss" Clicked="Button_Clicked" Grid.Row="1" Grid.Column="0" Background="#C3661C"  HeightRequest="100" WidthRequest="100"></Button>
+                    <Button  Text="Тёмный" ClassId="Tema" Clicked="Button_Clicked" Grid.Row="2" Grid.Column="0" Background="#C3661C"  HeightRequest="100" WidthRequest="100"></Button>
+                    <Button  Text="КЕНтавр" ClassId="Kentavr" Clicked="Button_Clicked" Grid.Row="3" Grid.Column="0" BackgroundColor="#C3661C" HeightRequest="100" WidthRequest="100"></Button>
+
+
+                    <Button  Text="Фиш" ClassId="Fish" Clicked="Button_Clicked" Grid.Row="0" Grid.Column="1" BackgroundColor="#538C15" HeightRequest="100" WidthRequest="100"></Button>
+                    <Button  Text="Ягерь" ClassId="Egor" Clicked="Button_Clicked" Grid.Row="1" Grid.Column="1" BackgroundColor="#538C15" HeightRequest="100" WidthRequest="100"></Button>
+                    <Button  Text="НЕ кит" ClassId="Nikita" Clicked="Button_Clicked" Grid.Row="2" Grid.Column="1" BackgroundColor="#538C15" HeightRequest="100" WidthRequest="100"></Button>
+                    <Button  Text="Ярек" ClassId="Yaroslaw" Clicked="Button_Clicked" Grid.Row="3" Grid.Column="1" BackgroundColor="#538C15" HeightRequest="100" WidthRequest="100"></Button>
+                    <Image x:Name="Pashtet" Grid.Row="4" Grid.Column="1" HeightRequest="100" WidthRequest="100"/>
+
+                </Grid>
                 
-                <Button  Text="Староста" ClassId="Starosta" Clicked="Button_Clicked"></Button>
-                <Label x:Name="lblStarosta" FontSize="Large"></Label>
-
-                <Button  Text="Босс Этой Качалки" ClassId="Boss" Clicked="Button_Clicked"></Button>
-                <Label x:Name="lblBoss" FontSize="Large"></Label>
-
-                <Button  Text="Тёмный" ClassId="Tema" Clicked="Button_Clicked"></Button>
-                <Label x:Name="lblTema" FontSize="Large"></Label>
-
-                <Button  Text="Фиш" ClassId="Fish" Clicked="Button_Clicked"></Button>
-                <Label x:Name="lblFish" FontSize="Large"></Label>
-
-                <Button  Text="Ягерь" ClassId="Egor" Clicked="Button_Clicked"></Button>
-                <Label x:Name="lblEgor" FontSize="Large"></Label>
-
-                <Button  Text="НЕ кит" ClassId="Nikita" Clicked="Button_Clicked"></Button>
-                <Label x:Name="lblNikita" FontSize="Large"></Label>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

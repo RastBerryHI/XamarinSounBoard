@@ -11,8 +11,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Pashtet.jpg" />
     <None Remove="Raw\3438-oh-shit-i-m-sorry.m4a" />
     <None Remove="Raw\test.mp3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Pashtet.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,6 +39,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Images\" />
     <Folder Include="Raw\" />
   </ItemGroup>
 </Project>
