@@ -15,5 +15,4 @@ C:\Users\musae\source\repos\ClearApp\ClearApp\ClearApp\obj\Debug\netstandard2.0\
 C:\Users\musae\source\repos\ClearApp\ClearApp\ClearApp\bin\Debug\netstandard2.0\Mono.Android.dll
 C:\Users\musae\source\repos\ClearApp\ClearApp\ClearApp\bin\Debug\netstandard2.0\Mono.Android.pdb
 C:\Users\musae\source\repos\ClearApp\ClearApp\ClearApp\bin\Debug\netstandard2.0\Mono.Android.xml
-C:\Users\musae\source\repos\ClearApp\ClearApp\ClearApp\obj\Debug\netstandard2.0\ClearApp.csprojAssemblyReference.cache
 C:\Users\musae\source\repos\ClearApp\ClearApp\ClearApp\obj\Debug\netstandard2.0\ClearApp.csproj.CopyComplete
